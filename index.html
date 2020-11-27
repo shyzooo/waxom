@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Waxom</title>
+</head>
+<body>
+
+	<!-- SVG============ -->
+	<svg display="none">
+		<symbol id="develop" viewBox="0 0 42.875 39.19">
+			<g>
+			<path d="M0.008,19.607 L3.993,17.458 L21.445,26.868 L38.896,17.458 L42.881,19.607 L21.445,31.163 L0.008,19.607 ZM0.008,11.576 L21.445,0.016 L42.881,11.576 L21.445,23.137 L0.008,11.576 ZM21.445,34.895 L38.896,25.483 L42.881,27.631 L21.445,39.193 L0.008,27.631 L3.993,25.483 L21.445,34.895 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="cust" viewBox="0 0 43.56 43.57">
+			<g>
+				<path d="M43.547,21.790 C43.547,20.170 42.381,18.441 40.942,17.933 C39.502,17.423 38.107,16.175 37.701,15.191 C37.295,14.209 37.401,12.336 38.056,10.957 C38.712,9.578 38.315,7.531 37.170,6.383 C36.024,5.237 33.977,4.842 32.597,5.498 C31.217,6.154 29.347,6.262 28.366,5.855 C27.385,5.450 26.137,4.052 25.625,2.613 C25.113,1.174 23.384,0.007 21.764,0.007 C20.143,0.007 18.414,1.174 17.902,2.613 C17.390,4.052 16.142,5.449 15.161,5.855 C14.180,6.262 12.310,6.154 10.930,5.498 C9.552,4.842 7.503,5.237 6.357,6.383 C5.212,7.531 4.815,9.578 5.471,10.957 C6.127,12.337 6.231,14.206 5.824,15.190 C5.416,16.172 4.025,17.423 2.586,17.933 C1.146,18.441 -0.020,20.170 -0.020,21.790 C-0.020,23.411 1.146,25.139 2.586,25.651 C4.025,26.163 5.418,27.414 5.826,28.394 C6.234,29.374 6.127,31.244 5.471,32.623 C4.815,34.002 5.212,36.050 6.357,37.195 C7.503,38.342 9.550,38.739 10.930,38.082 C12.310,37.426 14.180,37.321 15.161,37.729 C16.143,38.136 17.390,39.534 17.902,40.972 C18.414,42.408 20.143,43.573 21.764,43.573 C23.384,43.573 25.113,42.408 25.625,40.972 C26.137,39.534 27.383,38.136 28.364,37.726 C29.345,37.318 31.217,37.426 32.597,38.082 C33.976,38.739 36.024,38.342 37.170,37.195 C38.315,36.050 38.712,34.002 38.056,32.623 C37.401,31.244 37.293,29.373 37.699,28.393 C38.105,27.412 39.502,26.163 40.942,25.651 C42.381,25.139 43.547,23.411 43.547,21.790 ZM21.764,29.782 C17.344,29.782 13.770,26.210 13.770,21.799 C13.770,17.380 17.344,13.805 21.764,13.805 C26.174,13.805 29.748,17.380 29.748,21.799 C29.748,26.210 26.174,29.782 21.764,29.782 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="marketing" viewBox="0 0 50.88 35.63">
+			<g>
+				<path d="M50.661,14.001 L41.171,33.423 C40.576,34.644 38.979,35.644 37.628,35.644 L2.330,35.644 C0.980,35.644 0.362,34.642 0.961,33.423 L10.453,14.001 C11.046,12.778 12.642,11.775 13.992,11.775 L49.290,11.775 C50.644,11.775 51.259,12.778 50.661,14.001 ZM8.250,12.905 L-0.012,29.807 L-0.012,7.643 C-0.012,6.279 1.093,5.161 2.446,5.162 L13.262,5.162 L13.262,3.718 C13.262,2.723 13.644,1.795 14.344,1.090 C15.043,0.383 15.967,-0.005 16.951,-0.005 L23.241,-0.005 C25.270,-0.005 26.925,1.662 26.925,3.718 L26.925,5.161 L37.741,5.161 C39.092,5.161 40.199,6.279 40.199,7.643 L40.199,9.297 L13.992,9.297 C11.725,9.297 9.252,10.847 8.250,12.905 ZM15.720,5.162 L24.467,5.162 L24.467,3.718 C24.467,3.030 23.917,2.475 23.239,2.475 L16.948,2.475 C16.622,2.475 16.313,2.605 16.082,2.843 C15.852,3.077 15.720,3.390 15.720,3.718 L15.720,5.162 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="web" viewBox="0 0 47.594 47.59">
+			<g>
+				<path d="M47.137,18.837 L32.871,33.105 L0.003,47.583 L14.480,14.711 L28.748,0.447 C29.367,-0.174 30.373,-0.174 30.996,0.447 C31.617,1.070 31.617,2.075 30.996,2.696 L17.152,16.542 L8.576,36.008 L11.575,39.007 L31.042,30.434 L44.889,16.590 C45.508,15.967 46.512,15.967 47.137,16.590 C47.758,17.210 47.758,18.220 47.137,18.837 ZM29.214,27.586 C28.903,27.893 28.497,28.051 28.089,28.051 C27.680,28.051 27.274,27.893 26.964,27.586 C26.344,26.963 26.344,25.956 26.964,25.336 L40.296,12.005 C40.919,11.380 41.923,11.380 42.546,12.005 C43.169,12.625 43.169,13.630 42.546,14.254 L29.214,27.586 ZM25.734,24.105 C25.424,24.413 25.018,24.570 24.609,24.570 C24.203,24.570 23.795,24.413 23.484,24.105 C22.863,23.484 22.863,22.474 23.484,21.855 L36.817,8.523 C37.439,7.900 38.443,7.900 39.067,8.523 C39.688,9.143 39.688,10.150 39.067,10.773 L25.734,24.105 ZM22.253,20.622 C21.942,20.934 21.534,21.088 21.128,21.088 C20.722,21.088 20.314,20.934 20.003,20.622 C19.383,20.003 19.383,18.993 20.003,18.373 L33.336,5.042 C33.959,4.418 34.964,4.418 35.586,5.042 C36.208,5.662 36.208,6.668 35.586,7.292 L22.253,20.622 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="cart" viewBox="0 0 18 24">
+			<g>
+				<path d="M14.995,2.999 L13.496,2.999 C13.496,1.342 11.483,-0.002 8.999,-0.002 C6.514,-0.002 4.501,1.342 4.501,2.999 L3.002,2.999 C1.346,2.999 0.003,4.341 0.003,5.997 L0.003,20.995 C0.003,22.651 1.346,23.994 3.002,23.994 L14.995,23.994 C16.652,23.994 17.994,22.651 17.994,20.995 L17.994,5.997 C17.994,4.341 16.652,2.999 14.995,2.999 ZM8.999,1.498 C10.655,1.498 11.997,1.962 11.997,2.999 L6.000,2.999 C6.000,1.962 7.343,1.498 8.999,1.498 ZM16.495,20.995 C16.495,21.823 15.824,22.494 14.995,22.494 L3.002,22.494 C2.174,22.494 1.502,21.823 1.502,20.995 L1.502,19.495 L16.495,19.495 L16.495,20.995 ZM16.495,17.995 L1.502,17.995 L1.502,5.997 C1.502,5.169 2.174,4.497 3.002,4.497 L4.501,4.497 L4.501,8.998 L6.000,8.998 L6.000,4.497 L11.997,4.497 L11.997,8.998 L13.496,8.998 L13.496,4.497 L14.995,4.497 C15.824,4.497 16.495,5.169 16.495,5.997 L16.495,17.995 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="search" viewBox="0 0 24 24">
+			<g>
+				<path d="M23.762,22.681 L17.569,16.586 C19.190,14.825 20.187,12.494 20.187,9.929 C20.186,4.443 15.668,-0.002 10.093,-0.002 C4.519,-0.002 0.001,4.443 0.001,9.929 C0.001,15.416 4.519,19.862 10.093,19.862 C12.502,19.862 14.711,19.028 16.446,17.644 L22.663,23.763 C22.966,24.062 23.458,24.062 23.761,23.763 C24.065,23.464 24.065,22.979 23.762,22.681 ZM10.093,18.334 C5.377,18.334 1.553,14.572 1.553,9.929 C1.553,5.288 5.377,1.525 10.093,1.525 C14.810,1.525 18.633,5.288 18.633,9.929 C18.633,14.572 14.810,18.334 10.093,18.334 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="link" viewBox="0 0 24.625 24.62">
+			<g>
+				<path d="M22.811,10.522 L20.885,12.450 L17.698,15.639 C17.545,15.809 17.357,15.963 17.187,16.099 C15.414,17.497 13.062,17.804 11.034,17.004 C10.284,16.713 9.568,16.253 8.955,15.639 L11.596,12.995 C12.551,13.950 14.102,13.950 15.056,12.995 L17.084,10.966 L20.169,7.879 C21.124,6.924 21.124,5.371 20.169,4.417 C19.215,3.462 17.664,3.462 16.709,4.417 L14.255,6.873 C12.721,6.157 10.966,6.037 9.347,6.497 L14.068,1.774 C16.471,-0.631 20.408,-0.631 22.811,1.774 C25.231,4.195 25.231,8.117 22.811,10.522 ZM13.574,7.573 C14.323,7.862 15.039,8.322 15.653,8.936 L13.011,11.581 C12.057,10.625 10.506,10.625 9.551,11.581 L4.438,16.696 C3.483,17.652 3.483,19.202 4.438,20.158 C5.392,21.114 6.943,21.114 7.898,20.158 L10.250,17.804 C12.261,18.607 12.807,18.674 15.158,18.129 L10.540,22.801 C8.137,25.207 4.199,25.207 1.796,22.801 C-0.607,20.397 -0.607,16.458 1.796,14.054 L6.909,8.936 C6.977,8.869 7.063,8.783 7.148,8.715 C8.937,7.111 11.443,6.719 13.574,7.573 Z"/>
+			</g>
+		</symbol>
+
+		<symbol id="lupa" viewBox="0 0 25.157 24.47">
+			<g>
+				<path d="M24.675,23.982 C24.354,24.299 23.933,24.456 23.512,24.456 C23.092,24.456 22.670,24.299 22.349,23.982 L18.014,19.711 C16.121,21.158 13.754,22.028 11.178,22.028 C5.012,22.028 -0.004,17.086 -0.004,11.012 C-0.004,4.938 5.012,-0.004 11.178,-0.004 C17.344,-0.004 22.360,4.938 22.360,11.012 C22.360,13.382 21.589,15.574 20.292,17.373 L24.675,21.691 C25.317,22.324 25.317,23.350 24.675,23.982 ZM11.179,2.588 C6.464,2.588 2.628,6.367 2.628,11.012 C2.628,15.657 6.464,19.436 11.179,19.437 C13.283,19.437 15.209,18.681 16.700,17.434 C17.160,17.050 17.574,16.615 17.943,16.146 C19.059,14.723 19.729,12.945 19.729,11.012 C19.729,6.367 15.893,2.588 11.179,2.588 ZM16.029,9.391 C15.844,9.478 15.648,9.521 15.453,9.521 C14.966,9.521 14.499,9.254 14.271,8.793 C13.566,7.369 12.130,6.484 10.523,6.484 C9.797,6.484 9.208,5.904 9.208,5.187 C9.208,4.473 9.797,3.892 10.523,3.892 C13.144,3.892 15.487,5.335 16.636,7.657 C16.954,8.301 16.683,9.077 16.029,9.391 Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<!-- Header======================= -->
+	<header class="header">
+
+		<div class="container">
+
+			<div class="header__inner">
+
+				<div class="header__logo">
+					<img src="img/logo.png" alt="">
+				</div>
+
+				<nav class="nav">
+
+					<ul>
+
+						<li><a class="nav__link" href="#">Home</a></li>
+						<li><a class="nav__link" href="#">About Us</a></li>
+						<li><a class="nav__link" href="#">Portfolio</a></li>
+						<li><a class="nav__link" href="#">Features</a></li>
+						<li><a class="nav__link" href="#">Blog</a></li>
+						<li><a class="nav__link" href="#">Pricing</a></li>
+						<li><a class="nav__link" href="#">Shortcodes</a></li>
+						<li><a class="nav__link" href="#">Contact</a></li>
+						<li><a class="nav__link" href="#">
+							<svg class="nav__icon">
+								<use xlink:href="#cart"></use>
+							</svg>
+						</a></li>
+						<li><a class="nav__link" href="#">
+							<svg class="nav__search">
+								<use xlink:href="#search"></use>
+							</svg>
+						</a></li>
+
+					</ul>
+
+				</nav>
+
+				<div class="header__menu">
+
+					<a href="#" class="header__menu__link">Menu</a> 
+
+					<svg class="nav__icon header__menu__icon">
+						<use xlink:href="#cart"></use>
+					</svg>
+
+					<svg class="nav__search header__menu__search">
+						<use xlink:href="#search"></use>
+					</svg>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<!-- Intro=================== -->
+	<div class="intro">
+
+		<div class="arrow-2">
+			<div class="arrow-1-top"></div>
+    		<div class="arrow-1-bottom"></div>
+
+    		<div class="arrow-2-top"></div>
+    		<div class="arrow-2-bottom"></div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="intro__inner">
+
+				<div class="intro__text">
+
+					<h2>Unique and Modern Design</h2>
+					<h1>Portfolio PSD Template</h1>
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+					<a href="#" class="btn">get started</a>
+
+				</div>
+
+				<div class="intro__slider">
+
+					<div class="slider"></div>
+					<div class="slider"></div>
+					<div class="slider"></div>
+					<div class="slider"></div>
+					<div class="slider"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>	
+
+	<!-- Services================ -->
+		<div class="container">
+
+			<section class="services__inner">
+
+				<div class="services__item">
+
+					<div class="services__logo">
+						<svg class="services__icon">
+							<use xlink:href="#web"></use>
+						</svg>
+					</div>
+
+					<h3>Web & App Design</h3>
+
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+
+				</div>
+
+				<div class="services__item">
+
+					<div class="services__logo">
+						<svg class="services__icon">
+							<use xlink:href="#develop"></use>
+						</svg>
+					</div>
+
+					<h3>Development</h3>
+
+					<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+
+				</div>
+
+				<div class="services__item">
+
+					<div class="services__logo">
+						<svg class="services__icon">
+							<use xlink:href="#cust"></use>
+						</svg>
+					</div>
+
+					<h3>Customization</h3>
+
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+
+				</div>
+				
+				<div class="services__item">
+
+					<div class="services__logo">
+						<svg class="services__icon">
+							<use xlink:href="#marketing"></use>
+						</svg>
+					</div>
+
+					<h3>Marketing</h3>
+
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
+					
+				</div>
+
+			</section>
+
+		</div>
+
+	<!-- Ideas==================== -->
+	<article class="idea">
+
+		<div class="container">
+
+			<div class="idea__inner">
+
+				<div class="text idea__text">
+
+					<h3 class="text__title">Waxom is Realization of your Ideas.</h3>
+
+					<p class="text__subtitle idea__text__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="idea__block">
+				<div class="idea__block__left">
+					<img src="img/idea/left.jpg" class="idea__block__icon" alt="">
+				</div>
+
+				<div class="idea__block__right">
+					<img src="img/idea/right.jpg" class="idea__block__icon" alt="">
+				</div>
+
+				<div class="idea__block__center">
+					<img src="img/idea/center.jpg" class="idea__block__icon" alt="">
+				</div>
+		</div>
+
+	</article>
+
+	<!-- Boxes============= -->
+
+	<div class="boxes">
+
+		<div class="container">
+
+			<div class="boxes__inner">
+
+				<div class="boxes__text">
+
+					<h3><span>Waxom</span> Multipurpose WordPress Theme</h3>
+					<p>Don't Forget to Rate the Template. Thanks so much!</p>
+
+				</div>
+
+				<div class="boxes__btn">
+					<a href="#" class="btn">purshace now</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<!-- Projects======================= -->
+
+<div class="container">
+
+	<section class="projects">
+
+		<div class="projects__text text">
+
+			<h3 class="text__title projects__text__title">Our Latest Projects.</h3>
+
+			<p class="text__subtitle projects__text__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+
+		</div>
+
+			<nav class="nav__projects">
+
+				<ul>
+					<li><a class="projects__link" href="#">All</a></li>
+					<li><a class="projects__link" href="#">Web Design</a></li>
+					<li><a class="projects__link" href="#">Mobile App</a></li>
+					<li><a class="projects__link" href="#">Illustration</a></li>
+					<li><a class="projects__link" href="#">Photography</a></li>
+				</ul>
+
+			</nav>
+
+		<div class="projects__items">
+				
+				<div class="project__item">
+
+					<div class="project__item__logo">
+
+						<img src="img/projects/1.png" class="project__item__icon" alt="">
+
+						<div class="logo__hover">
+
+							<svg class="logo__hover__link">
+								<use xlink:href="#link"></use>
+							</svg>
+
+							<svg class="logo__hover__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+
+						</div>
+
+					</div>
+
+					<div class="project__item__text">
+
+						<h4>Claritas Etiam Processus</h4>
+						<p>Photography, Nature</p>
+
+					</div>
+					
+				</div>
+
+				<div class="project__item">
+
+					<div class="project__item__logo">
+
+						<img src="img/projects/2.png" class="project__item__icon" alt="">
+
+						<div class="logo__hover">
+							
+							<svg class="logo__hover__link">
+								<use xlink:href="#link"></use>
+							</svg>
+
+							<svg class="logo__hover__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+
+						</div>
+
+
+					</div>
+
+					<div class="project__item__text">
+
+						<h4>Quam Nutamus Farum</h4>
+						<p>Graphic Design, Mock-Up</p>
+
+					</div>
+
+				</div>
+
+				<div class="project__item">
+
+					<div class="project__item__logo">
+
+						<img src="img/projects/3.png" class="project__item__icon" alt="">
+
+						<div class="logo__hover">
+
+							<svg class="logo__hover__link">
+								<use xlink:href="#link"></use>
+							</svg>
+
+							<svg class="logo__hover__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+							
+						</div>
+
+					</div>
+
+					<div class="project__item__text">
+
+						<h4>Usus Legentis Videntur</h4>
+						<p>Photography, Holiday</p>
+
+					</div>
+
+				</div>
+
+				<div class="project__item">
+					
+					<div class="project__item__logo">
+
+						<img src="img/projects/4.png" class="project__item__icon" alt="">
+
+						<div class="logo__hover">
+
+							<svg class="logo__hover__link">
+								<use xlink:href="#link"></use>
+							</svg>
+
+							<svg class="logo__hover__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+							
+						</div>
+
+					</div>
+
+					<div class="project__item__text">
+
+						<h4>Claritas Etiam Processus</h4>
+						<p>Photography, Nature</p>
+
+					</div>
+
+				</div>
+
+				<div class="project__item">
+
+					<div class="project__item__logo">
+
+						<img src="img/projects/5.png" class="project__item__icon" alt="">
+
+						<div class="logo__hover">
+
+							<svg class="logo__hover__link">
+								<use xlink:href="#link"></use>
+							</svg>
+
+							<svg class="logo__hover__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+							
+						</div>
+
+					</div>
+
+					<div class="project__item__text">
+
+						<h4>Quam Nutamus Farum</h4>
+						<p>Graphic Design, Mock-Up</p>
+
+					</div>
+
+				</div>
+
+				<div class="project__item">
+
+					<div class="project__item__logo">
+
+						<img src="img/projects/6.png" class="project__item__icon" alt="">
+
+						<div class="logo__hover">
+
+							<svg class="logo__hover__link">
+								<use xlink:href="#link"></use>
+							</svg>
+
+							<svg class="logo__hover__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+							
+						</div>
+
+					</div>
+
+					<div class="project__item__text">
+
+						<h4>Usus Legentis Videntur</h4>
+						<p>Photography, Holiday</p>
+
+					</div>
+
+				</div>
+			
+		</div>
+
+		<div class="projects__btn">
+
+			<a href="#" class="btn">load more</a>
+
+		</div>
+
+	</section>
+
+</div>
+
+<!-- Video=============== -->
+
+<div class="video">
+
+	<div class="container">
+
+		<div class="video__inner">
+
+			<div class="video__logo">
+
+				<img src="img/video/play.png" alt="">
+
+			</div>
+
+			<div class="video__text">
+
+				<h4>Waxom Video Presentation</h4>
+				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
+				<span>03:26</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Excellent for Mobile===================== -->
+
+<article class="mobile">
+
+	<div class="container">
+
+		<div class="mobile__inner">
+
+			<div class="mobile__logo">
+				<img src="img/hand.png" class="mobile__icon" alt="">
+			</div>
+
+			<div class="mobile__right">
+
+				<div class="mobile__text text">
+
+				<h4 class="text__title mobile__text__title">Excellent for Mobile Devices.</h4>
+				<p class="text__subtitle">Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+
+				</div>
+
+				<div class="mobile__features">
+
+						<div class="features__item">
+
+							<img src="img/arrow.png" class="mobile__features__icon" alt="">
+
+							<p>Nam liber tempor cum soluta nobis eleifend option;</p>
+
+						</div>
+
+						<div class="features__item">
+
+							<img src="img/arrow.png" class="mobile__features__icon" alt="">
+
+							<p>Option congue nihil imperdiet doming id quod mazim placerat facer;</p>
+
+						</div>
+
+						<div class="features__item">
+								
+							<img src="img/arrow.png" class="mobile__features__icon" alt="">
+
+							<p>Eodem modo typi, qui nunc nobis videntur parum futurum;</p>
+
+						</div>
+
+						<div class="features__item">
+
+							<img src="img/arrow.png" class="mobile__features__icon" alt="">
+
+							<p>Investigationes demonstraverunt lectores</p>
+
+						</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</article>
+
+<!-- Counters================= -->
+
+<section class="counters">
+
+	<div class="container">
+
+		<div class="counters__inner">
+
+			<div class="counters__item">
+
+				<div class="counters__logo">
+					<img src="img/Counters/1.png" alt="">
+				</div>
+
+				<h3>3587</h3>
+				<p>Satisfied Clients</p>
+				
+			</div>
+
+			<div class="counters__item">
+
+				<div class="counters__logo">
+					<img src="img/Counters/2.png" alt="">
+				</div>
+
+				<h3>207</h3>
+				<p>Cups of coffee</p>
+				
+			</div>
+
+			<div class="counters__item">
+
+				<div class="counters__logo">
+					<img src="img/Counters/3.png" alt="">
+				</div>
+
+				<h3>2500</h3>
+				<p>Blog posts</p>
+				
+			</div>
+
+			<div class="counters__item">
+
+				<div class="counters__logo">
+					<img src="img/Counters/4.png" alt="">
+				</div>
+
+				<h3>873</h3>
+				<p>Likes</p>
+				
+			</div>
+
+			<div class="counters__item">
+
+				<div class="counters__logo">
+					<img src="img/Counters/5.png" alt="">
+				</div>
+
+				<h3>900</h3>
+				<p>We launched</p>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- Recent Posts================== -->
+
+<section class="recentPosts">
+
+	<div class="container">
+
+		<div class="recentPosts__inner">
+
+			<div class="recentPosts__text text">
+
+				<h3 class="text__title posts__text__title">Recent Posts.</h3>
+
+				<p class="text__subtitle">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+				
+			</div>
+
+			<div class="posts__items">
+				
+				<div class="post">
+
+					<div class="post__logo">
+						<img src="img/posts/foots.png" class="post__icon" alt="">
+
+						<div class="post__date">
+							<div class="post__number">
+								30
+							</div>
+							<div class="post__month">
+								Sep.
+							</div>
+						</div>
+
+						<div class="logo__slider">
+							<div class="logo__slider__item"></div>
+							<div class="logo__slider__item-2"></div>
+							<div class="logo__slider__item-3"></div>
+							<div class="logo__slider__item-4"></div>
+							<div class="logo__slider__item-5"></div>
+						</div>
+
+						<div class="post__logo__hover">
+							
+						</div>
+
+					</div>
+
+					<div class="post__text">
+
+					<h4>Lorem ipsum dolor sit amet</h4>
+
+					<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+
+					<h3>Read More</h3>
+
+					</div>
+
+				</div>
+
+				<div class="post">
+
+					<div class="post__logo">
+						<img src="img/posts/hands.png" class="post__icon" alt="">
+
+						<div class="post__date">
+							<div class="post__number">
+								30
+							</div>
+							<div class="post__month">
+								Sep.
+							</div>
+						</div>
+
+						<div class="post__logo__hover">
+							
+						</div>
+
+					</div>
+
+					<div class="post__text">
+
+					<h4>Lorem ipsum dolor sit amet</h4>
+
+					<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+
+					<h3>Read More</h3>
+
+					</div>
+
+				</div>
+
+				<div class="post">
+
+					<div class="post__logo">
+						<img src="img/posts/boat.png" class="post__icon" alt="">
+
+						<div class="post__date">
+							<div class="post__number">
+								30
+							</div>
+							<div class="post__month">
+								Sep.
+							</div>
+						</div>
+
+						<div class="post__logo__hover">
+							
+						</div>
+
+					</div>
+
+					<div class="post__text">
+
+					<h4>Lorem ipsum dolor sit amet</h4>
+
+					<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
+
+					<h3>Read More</h3>
+					
+					</div>
+
+				</div>
+
+		</div>
+
+		<div class="slider__posts">
+
+				<div class="slider__item slider__arrow__left">
+					
+				</div>
+
+				<div class="slider__item slider__arrow__right">
+					
+				</div>
+
+			</div>
+
+	</div>
+
+</section>
+
+<!-- Partners================== -->
+
+<section class="partners">
+
+	<div class="container">
+
+		<div class="partners__inner">
+			<div class="partners__logo">
+				<img src="img/partners/logo-1.png" alt="">
+			</div>
+
+			<div class="partners__logo">
+				<img src="img/partners/logo-2.png" alt="">
+			</div>
+
+			<div class="partners__logo">
+				<img src="img/partners/logo-3.png" alt="">
+			</div>
+
+			<div class="partners__logo">
+				<img src="img/partners/logo-4.png" alt="">
+			</div>
+			
+		</div>
+
+	</div>
+
+</section>
+
+<!-- Footer================ -->
+
+<footer class="footer">
+
+	<div class="container">
+
+		<div class="footer__inner">
+
+			<div class="footer__item footer__item__logo">
+
+				<div class="footer__logo">
+					<img src="img/logo.png" alt="" class="footer__itemone__icon">
+				</div>
+
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.</p>
+
+				<h4>Read More</h4>
+				
+			</div>
+
+			<div class="footer__item footer__item__margin">
+
+				<h3>Recent Posts</h3>
+
+				<div class="footer__post">
+
+					<div class="footer__post--top">
+
+						<h5>September 08, 2015</h5>
+
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+
+					</div>
+
+					<div class="footer__post--center">
+
+						<h5>September 08, 2015</h5>
+
+						<p>Diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+						
+					</div>
+
+					<div class="footer__post--bottom">
+
+						<h5>September 08, 2015</h5>
+
+						<p>Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima</p>
+						
+					</div>
+
+				</div>
+				
+			</div>
+
+			<div class="footer__item footer__item__margin">
+
+				<h3>Our Twitter</h3>
+
+				<div class="footer__post">
+					
+					<div class="footer__post--top">
+
+						<p><span>@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming</p>
+
+						<h5>3 mins ago</h5>
+						
+					</div>
+
+					<div class="footer__post--center">
+
+						<p>Mirum est <span>#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</p>
+
+						<h5>5 hours ago</h5>
+						
+					</div>
+
+					<div class="footer__post--bottom">
+
+						<p>Soluta nobis option <b>bit.ly/1Hniso7</b></p>
+
+						<h5>20 days ago</h5>
+						
+					</div>
+
+				</div>
+				
+			</div>
+
+			<div class="footer__item footer__item__widget footer__item__margin">
+
+				<h3>Dribbble Widget</h3>
+
+				<div class="footer__widget__items">
+
+				<div class="footer__widget__logo">
+					<img src="img/widget/1.png" class="footer__widget__icon" alt="">
+				</div>
+
+				<div class="footer__widget__logo">
+					<img src="img/widget/2.png" class="footer__widget__icon" alt="">
+				</div>
+
+				<div class="footer__widget__logo">
+					<img src="img/widget/3.png" class="footer__widget__icon" alt="">
+				</div>
+
+				<div class="footer__widget__logo">
+					<img src="img/widget/4.png" class="footer__widget__icon" alt="">
+				</div>
+
+				</div>
+				
+			</div>
+			
+		</div>
+
+	</div>
+
+</footer>
+
+<!-- Copyright================= -->
+
+<div class="copyright">
+
+	<div class="container">
+
+		<div class="copyright__inner">
+
+			<nav class="copyright__nav">
+
+				<p>Copyright © 2015 <span>Waxom</span></p>
+				<a href="#" class="copyright__link">Privacy Policy</a>
+				<a href="#" class="copyright__link">FAQ</a>
+				<a href="#" class="copyright__link">Support</a>
+				
+			</nav>
+
+			<div class="copyright__auth">
+				<p>Designed by <span>ThemeFire</span> | Only on <span>Envato Market</span></p>
+			</div>
+			
+		</div>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>
